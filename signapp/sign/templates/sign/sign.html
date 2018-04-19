@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome</title>
+</head>
+<body>
+
+	<form method="post" action="{% url 'sign' %}" >
+        {% csrf_token %}
+    <table>
+    <h2>Please fillup the Form </h2>
+    <tr>
+    <th>Name:</th><th>{{ form.name }} </th>
+    </tr>
+    <tr>
+    <th>Phone:</th><th>{{ form.phone }}</th>
+    </tr>
+    <tr>
+    <th>Email:</th><th>{{ form.email }}</th>
+    </tr>
+
+    <th></th><th><button type="submit">Sign</button></th>
+    </tr>
+    </table>
+	</form>
+</body>
+</html>

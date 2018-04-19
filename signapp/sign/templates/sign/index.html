@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Signbook</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2>Welcome to our Signbook</h2>
+	<a href="{% url 'sign' %}">SignUp here</a>
+
+	{% for c in signup %}
+	<p>{{ c.name }}</p>
+	<p>{{ c.phone }}</p>
+	<p>{{ c.email }}</p>
+	{% endfor %}
+
+
+</body>
+</html>
